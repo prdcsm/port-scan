@@ -21,7 +21,6 @@ if method == "1":
     print("\n######### Port Range Scanner #####################\n")
     minport = int(input("Minimum port number:"))
     maxport = int(input("Maximum port number:"))
-    print(block)
     
     for port in range(minport, maxport):
         try:
