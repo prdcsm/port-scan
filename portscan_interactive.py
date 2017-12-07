@@ -6,6 +6,7 @@ import socket
 host = []
 ports = []
 s = socket.socket()
+block = "\n#############################################\n"
 
 #----------------------------------------------------------------
 # --- Input queries ---------------------------------------------
@@ -20,6 +21,7 @@ host = input("Type in the target host address. ")
 if method == "1":
     minport = int(input("Minimum port number:"))
     maxport = int(input("Maximum port number:"))
+    print(block)
     for port in range(minport, maxport):
         try:
             s.connect((host, port))
@@ -35,6 +37,7 @@ if method == "1":
 #----------------------------------------------------------------
 # --- Specific ports scan ---------------------------------------
 if method == "2":
+    print(block)
     print("\nType in the specific port numbers one by one.\n"
       "When you finished, type \"S\" to start the scan.\n")
     while True:
