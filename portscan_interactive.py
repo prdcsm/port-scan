@@ -22,7 +22,6 @@ if method == "1":
     maxport = int(input("Maximum port number:"))
     for port in range(minport, maxport):
         try:
-            #print(">>> Attempting to connect to "+ ip +":"+str(port))
             s.connect((host, port))
             banner = s.recv(1024)
             decodedBanner = banner.decode('utf-8')
@@ -39,9 +38,9 @@ if method == "2":
     print("\nType in the specific port numbers one by one.\n"
       "When you finished, type \"S\" to start the scan.\n")
     while True:
-        inputport = input("Port number: ")
-        if inputport != "S":
-            ports.append(int(inputport))
+        inputPort = input("Port number: ")
+        if inputPort != "S":
+            ports.append(int(inputPort))
         else:
             break
 
